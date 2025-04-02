@@ -1,0 +1,1 @@
+When comparing LXC to Docker, they both serve different use cases. Docker is more suitable for **application containerisation** whereas LXC is more relevant for **system-level functionality** and also ==**persistent environments**==.
