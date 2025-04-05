@@ -45,3 +45,14 @@ lxc.net.0.hwaddr = 00:16:3e:xx:xx:xx
 lxc.idmap = u 0 165536 65536
 lxc.idmap = g 0 165536 65536
 ```
+
+## Setting access control list
+To prevent possible permission errors, we need to set up an access control list on our `.local` directory.
+```bash
+$ sudo apt update
+$ sudo apt install -y acl
+$ setfacl -R -m u:165536:x ~/.local
+```
+This command sets an ACL (Access Control List) for a specific user (UID 165536), recursively on the ~/.local directory, giving that user execute (x) permission.
+
+
