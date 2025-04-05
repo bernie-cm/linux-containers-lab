@@ -55,4 +55,37 @@ $ setfacl -R -m u:165536:x ~/.local
 ```
 This command sets an ACL (Access Control List) for a specific user (UID 165536), recursively on the ~/.local directory, giving that user execute (x) permission.
 
+## Creating an unprivileged container
+Once the setup is complete, we can create a container using the `download` template. This gives us all available images designed to work **without privileges**.
+
+```bash
+$ lxc-create --template download --name unpriv-cont-user
+```
+Once the image index is downloaded, the CLI tool will display the images and await for the user to provide the distro, release and architecture required. In this case, **ubuntu**, **jammy** and **amd64** will be used.
+
+```bash
+---
+
+Distribution:
+ubuntu
+Release:
+jammy
+Architecture:
+amd64
+
+Downloading the image index
+Downloading the rootfs
+Downloading the metadata
+The image cache is now ready
+Unpacking the rootfs
+
+---
+You just created an Ubuntu jammy amd64 (20250404_20:34) container.
+```
+
+## Starting the container
+Now the container has been created, we can start it.
+```bash
+$ lxc-start -n unpriv-cont-user -d
+```
 
