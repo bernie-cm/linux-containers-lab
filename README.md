@@ -88,4 +88,11 @@ Now the container has been created, we can start it.
 ```bash
 $ lxc-start -n unpriv-cont-user -d
 ```
-
+With the container running we can interact with its environment.
+```bash
+$ lxc-attach -n unpriv-cont-user
+# hostname
+unpriv-cont-user
+# exit
+$ lxc-stop -n unpriv-cont-user
+```
