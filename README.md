@@ -10,7 +10,7 @@ $ sudp apt install -y lxc
 Since we need to create an **unprivileged container** (for security reasons), the user that will be attached to this container needs to have permissions to create network devices.
 
 ```bash
-$ sudo bash -c 'echo <username veth lxcbr0 10 >> /etc/lxc/lxc-usernet'
+$ sudo bash -c 'echo <username> veth lxcbr0 10 >> /etc/lxc/lxc-usernet'
 $ cat /etc/lxc/lxc-usernet
 
 # USERNAME TYPE BRIDGE COUNT
