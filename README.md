@@ -4,7 +4,7 @@ Linux Containers, or LXC, is an interface for Linux kernel vritualisation. You c
 ## Installing LXC
 ```bash
 $ sudo apt update
-$ sudp apt install -y lxc
+$ sudo apt install -y lxc
 ```
 
 Since we need to create an **unprivileged container** (for security reasons), the user that will be attached to this container needs to have permissions to create network devices.
