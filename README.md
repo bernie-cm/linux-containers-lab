@@ -1,4 +1,4 @@
-# Using Linux Containers (LXC)
+# Beyond Docker: Setting Up and Managing Linux Containers with LXC
 Linux Containers, or LXC, is an interface for Linux kernel vritualisation. You can create Linux containers that enable persistence, and system-level functionality. When comparing LXC to Docker, they both serve different use cases. Docker is more suitable for **application containerisation** whereas LXC is more relevant for **system-level functionality** and also **persistent environments**.
 
 ## Installing LXC
